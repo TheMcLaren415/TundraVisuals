@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tundra Visuals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1c2b45 0%, #05070d 70%);
+      color: white;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('logo.png') center/cover no-repeat;
+      filter: blur(20px) brightness(0.25);
+      transform: scale(1.1);
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 260px;
+      max-width: 90%;
+      border-radius: 50%;
+      box-shadow: 0 0 45px rgba(130, 170, 255, 0.45);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 4rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-weight: 700;
+      background: linear-gradient(90deg, #dfe8ff, #8ab4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      margin-top: 15px;
+      max-width: 650px;
+      color: #c8d4f2;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 16px 38px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-download {
+      background: linear-gradient(135deg, #8ab4ff, #4a6cff);
+      color: white;
+      box-shadow: 0 0 20px rgba(74, 108, 255, 0.4);
+    }
+
+    .btn-discord {
+      border: 2px solid rgba(255,255,255,0.2);
+      color: white;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px) scale(1.03);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .buttons {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <img src="logo.png" alt="Tundra Visuals Logo" class="logo">
+
+    <h1>Tundra Visuals</h1>
+
+    <p>
+      Premium visuals, cinematic design and powerful style for your projects. 
+      Join the community and download exclusive visual content directly through our Discord.
+    </p>
+
+    <div class="buttons">
+      <a href="https://discord.gg/vD3cG5TUUT" class="btn btn-download" target="_blank">
+        Скачать
+      </a>
+
+      <a href="https://discord.gg/vD3cG5TUUT" class="btn btn-discord" target="_blank">
+        Discord
+      </a>
+    </div>
+
+    <div class="footer">
+      © 2026 Tundra Visuals
+    </div>
+  </div>
+</body>
+</html>
